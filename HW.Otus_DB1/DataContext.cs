@@ -30,14 +30,14 @@ namespace HW.Otus_DB1
                 .HasForeignKey(od => od.OrderID);
 
             modelBuilder.Entity<Product>()
-                .HasMany(p => p.OrderDetails)
+                .HasMany(p => p.OrderDetails)   //не уверен что правильно понял зависимость
                 .WithOne(od => od.Product)
                 .HasForeignKey(od=>od.ProductID);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=32769;Username=postgres;Password=200697vit;Database=Otus.HW_DB1");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=54432;Username=postgres;Password=PASSWORD;Database=Otus.HW_DB1");
 
             base.OnConfiguring(optionsBuilder);
         }
