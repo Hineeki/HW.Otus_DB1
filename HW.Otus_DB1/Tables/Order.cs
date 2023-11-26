@@ -12,5 +12,9 @@ namespace TableLib
         public long UserID { get; set; }
         public DateTime OrderDate { get; set; }
         public StatusEnum Status { get; set; }
+
+        //настройка связей
+        public User User { get; set; }
+        public ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }

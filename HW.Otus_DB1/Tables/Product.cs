@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,8 @@ namespace TableLib
         public string Description { get; set; }
         public double Price { get; set; }
         public int QuantityInStock { get; set; }
+
+        //настройка связей
+        public IList<OrderDetail> OrderDetails { get; set; }
     }
 }

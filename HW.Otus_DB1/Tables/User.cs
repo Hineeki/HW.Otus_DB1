@@ -13,5 +13,8 @@ namespace TableLib
         public string UserName { get; set; }
         public string Email { get; set; }
         public DateTime RegistrationDate { get; set; }
+
+        //настройка связей
+        public ICollection<Order> Orders { get; set; }
     }
 }
