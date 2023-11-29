@@ -18,7 +18,7 @@ namespace HW.Otus_DB1
             //UpdateProdPrice("Sugar", 2.5);
         }
 
-        static void InsertToTable(string productName, string discr, double price, int stock)//хз что по перегрузкам
+        static void InsertToTable(string productName, string discr, decimal price, uint stock)//хз что по перегрузкам
         {
             using (DataContext db = new DataContext())
             {
@@ -36,7 +36,7 @@ namespace HW.Otus_DB1
             }
         }
 
-        static void UpdateProdPrice(string prodName, double newPrice)
+        static void UpdateProdPrice(string prodName, decimal newPrice)
         {
             using (DataContext db = new DataContext())
             {

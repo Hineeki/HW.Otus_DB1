@@ -11,8 +11,8 @@ namespace TableLib
         public long OrderDetailID { get; set; }
         public long OrderID { get; set; }
         public long ProductID { get; set; }
-        public int Quantity { get; set; }
-        public double TotalCost { get; set; }
+        public uint Quantity { get; set; }
+        public decimal TotalCost { get; set; }
 
         //настройка связей
         public Order Order { get; set; }

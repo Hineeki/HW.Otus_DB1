@@ -12,8 +12,8 @@ namespace TableLib
         public long ProductID { get; set; }
         public string ProductName { get; set; }
         public string Description { get; set; }
-        public double Price { get; set; }
-        public int QuantityInStock { get; set; }
+        public decimal Price { get; set; }
+        public uint QuantityInStock { get; set; }
 
         //настройка связей
         public IList<OrderDetail> OrderDetails { get; set; }
